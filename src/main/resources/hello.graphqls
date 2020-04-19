@@ -1,0 +1,25 @@
+type Employee{
+    empId: Int!
+    empName: String!
+    designation: String!
+    salary: Float!
+}
+type Person{
+    id: Int!
+    firstName: String!
+    lastName: String!
+    fullName: String!
+}
+type Query{
+    hello: String!
+    say(str: String!): String!
+    people: [Person!]!
+    getAllEmployee: [Employee]!
+    countEmployees: Int!
+    getEmployee(empId: Int!): Employee
+
+}
+type Mutation{
+    createPerson(firstName: String!, lastName: String!): Person!
+    newEmployee(empId: Int!, empName: String!, designation: String!, salary: Float!): Employee!
+}
